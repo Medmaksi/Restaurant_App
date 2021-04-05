@@ -19,7 +19,6 @@ const LOGIN_MUTATION = gql`
 `;
 
 const LoginScreen = () => {
-    const [hidePass, setHidePass] = useState(true);
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const history = useHistory();
@@ -44,7 +43,7 @@ const LoginScreen = () => {
 
                 <Form.Group controlId="formBasicPassword">
                     <Form.Label>Password</Form.Label>
-                    <Form.Control onChange={(event) => setPassword(event.target.value)} type={hidePass ? "password" : "text"} placeholder="Password" />
+                    <Form.Control onChange={(event) => setPassword(event.target.value)} type="password" placeholder="Password" />
                 </Form.Group>
                 <Button onClick={(e) => {
                     e.preventDefault();
